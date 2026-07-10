@@ -2,14 +2,20 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>NexaCrypt Exchange | Buy & Sell Cryptocurrency</title>
 
     <meta name="description"
-        content="Buy and Sell Bitcoin, Ethereum, USDT and other cryptocurrencies safely with NexaCrypt Exchange.">
+        content="Buy and Sell Bitcoin, Ethereum, USDT, Solana and more with NexaCrypt Exchange.">
+
+    <meta name="keywords"
+        content="Bitcoin, Ethereum, Crypto, Cryptocurrency, USDT, Solana, Binance, Exchange">
+
+    <meta name="author" content="NexaCrypt">
+
+    <link rel="icon" href="images/favicon.png">
 
     <!-- Google Fonts -->
 
@@ -17,13 +23,13 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Font Awesome -->
 
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- CSS -->
 
@@ -33,102 +39,160 @@
 
 <body>
 
-    <!-- Navigation -->
+    <!-- PRELOADER -->
 
-<nav>
-    <div class="logo">
-        <i class="fa-brands fa-bitcoin"></i>
-        <span>NexaCrypt</span>
+    <div id="preloader">
+        <div class="loader"></div>
     </div>
 
-    <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Markets</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
+    <!-- HEADER -->
 
-    <a href="#" class="trade-btn">Start Trading</a>
+    <header>
 
-    <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</nav>
+        <nav>
 
+            <div class="logo">
 
+                <i class="fa-brands fa-bitcoin"></i>
 
-    <!-- Hero -->
+                <span>NexaCrypt</span>
 
-    <section class="hero">
+            </div>
 
-        <div class="hero-text">
+            <ul class="nav-links">
 
-            <p class="badge">
+                <li><a href="#home">Home</a></li>
 
-                Trusted Digital Asset Exchange
+                <li><a href="#markets">Markets</a></li>
 
-            </p>
+                <li><a href="#services">Services</a></li>
+
+                <li><a href="#coins">Coins</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+            <a href="#" class="trade-btn">
+
+                Start Trading
+
+            </a>
+
+            <div class="hamburger">
+
+                <span></span>
+
+                <span></span>
+
+                <span></span>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <span class="badge">
+
+                Secure Cryptocurrency Trading
+
+            </span>
 
             <h1>
 
                 Buy & Sell Cryptocurrency
+
                 <span>Safely & Instantly</span>
 
             </h1>
 
             <p>
 
-                Trade Bitcoin, Ethereum, USDT, Solana and more with secure
-                transactions, competitive rates and fast settlement.
+                Trade Bitcoin, Ethereum, USDT, Solana and many more digital
+                assets with competitive rates and fast settlement.
 
             </p>
 
             <div class="hero-buttons">
 
-                <a href="#" class="primary">
+                <a href="#" class="primary-btn">
 
                     Buy Crypto
 
                 </a>
 
-                <a href="#" class="secondary">
+                <a href="#" class="secondary-btn">
 
-                    WhatsApp
+                    Sell Crypto
 
                 </a>
 
             </div>
 
+            <div class="hero-stats">
+
+                <div>
+
+                    <h3>10K+</h3>
+
+                    <span>Transactions</span>
+
+                </div>
+
+                <div>
+
+                    <h3>500+</h3>
+
+                    <span>Happy Clients</span>
+
+                </div>
+
+                <div>
+
+                    <h3>24/7</h3>
+
+                    <span>Support</span>
+
+                </div>
+
+            </div>
+
         </div>
-
-
 
         <div class="hero-image">
 
-            <div class="glass-card">
+            <div class="market-card">
 
-                <h3>Today's Market</h3>
+                <h2>
 
-                <div class="coin">
+                    Live Market
+
+                </h2>
+
+                <div class="market-row">
 
                     <span>BTC</span>
 
-                    <strong>$--</strong>
+                    <strong id="btc-price">$ --</strong>
 
                 </div>
 
-                <div class="coin">
+                <div class="market-row">
 
                     <span>ETH</span>
 
-                    <strong>$--</strong>
+                    <strong id="eth-price">$ --</strong>
 
                 </div>
 
-                <div class="coin">
+                <div class="market-row">
 
                     <span>USDT</span>
 
@@ -136,11 +200,11 @@
 
                 </div>
 
-                <div class="coin">
+                <div class="market-row">
 
                     <span>SOL</span>
 
-                    <strong>$--</strong>
+                    <strong id="sol-price">$ --</strong>
 
                 </div>
 
@@ -150,7 +214,641 @@
 
     </section>
 
-<script src="script.js"></script>
+    <!-- SERVICES -->
+
+    <section class="services" id="services">
+
+        <div class="section-title">
+
+            <h2>Our Services</h2>
+
+            <p>
+                Fast, secure and trusted cryptocurrency solutions.
+            </p>
+
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+
+                <i class="fa-solid fa-wallet"></i>
+
+                <h3>Buy Crypto</h3>
+
+                <p>
+                    Purchase digital assets securely at competitive rates.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                <h3>Sell Crypto</h3>
+
+                <p>
+                    Convert your crypto to cash quickly and securely.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <h3>Secure Payments</h3>
+
+                <p>
+                    Every transaction is protected and verified.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+        <!-- =========================
+         FEATURED COINS
+    ========================== -->
+
+    <section class="coins" id="coins">
+
+        <div class="section-title">
+
+            <span>Markets</span>
+
+            <h2>Popular Cryptocurrencies</h2>
+
+            <p>
+                We support the world's most trusted digital assets.
+            </p>
+
+        </div>
+
+        <div class="coin-grid">
+
+            <div class="coin-card">
+
+                <i class="fa-brands fa-bitcoin"></i>
+
+                <h3>Bitcoin</h3>
+
+                <span>BTC</span>
+
+                <p>Buy & Sell Bitcoin instantly.</p>
+
+            </div>
+
+            <div class="coin-card">
+
+                <i class="fa-brands fa-ethereum"></i>
+
+                <h3>Ethereum</h3>
+
+                <span>ETH</span>
+
+                <p>Fast Ethereum transactions.</p>
+
+            </div>
+
+            <div class="coin-card">
+
+                <i class="fa-solid fa-dollar-sign"></i>
+
+                <h3>Tether</h3>
+
+                <span>USDT</span>
+
+                <p>TRC20 • ERC20 • BEP20</p>
+
+            </div>
+
+            <div class="coin-card">
+
+                <i class="fa-solid fa-s"></i>
+
+                <h3>Solana</h3>
+
+                <span>SOL</span>
+
+                <p>Lightning fast blockchain.</p>
+
+            </div>
+
+            <div class="coin-card">
+
+                <i class="fa-solid fa-coins"></i>
+
+                <h3>BNB</h3>
+
+                <span>BNB</span>
+
+                <p>Trade Binance Coin securely.</p>
+
+            </div>
+
+            <div class="coin-card">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <h3>XRP</h3>
+
+                <span>XRP</span>
+
+                <p>Fast international transfers.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         WHY CHOOSE US
+    ========================== -->
+
+    <section class="why-us">
+
+        <div class="section-title">
+
+            <span>Why NexaCrypt</span>
+
+            <h2>Why Traders Choose Us</h2>
+
+        </div>
+
+        <div class="features">
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <h3>Secure Platform</h3>
+
+                <p>
+                    Every transaction is encrypted and protected.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-bolt"></i>
+
+                <h3>Fast Transactions</h3>
+
+                <p>
+                    Receive your crypto within minutes.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-headset"></i>
+
+                <h3>24/7 Support</h3>
+
+                <p>
+                    Friendly customer support whenever you need help.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                <h3>Best Rates</h3>
+
+                <p>
+                    Competitive prices for buying and selling.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+          HOW IT WORKS
+    ========================== -->
+
+    <section class="steps">
+
+        <div class="section-title">
+
+            <span>Simple Process</span>
+
+            <h2>How It Works</h2>
+
+        </div>
+
+        <div class="steps-container">
+
+            <div class="step">
+
+                <div class="number">1</div>
+
+                <h3>Contact Us</h3>
+
+                <p>
+                    Reach us via WhatsApp or email.
+                </p>
+
+            </div>
+
+            <div class="step">
+
+                <div class="number">2</div>
+
+                <h3>Choose Your Coin</h3>
+
+                <p>
+                    Tell us the cryptocurrency you wish to buy or sell.
+                </p>
+
+            </div>
+
+            <div class="step">
+
+                <div class="number">3</div>
+
+                <h3>Make Payment</h3>
+
+                <p>
+                    Follow the secure payment instructions.
+                </p>
+
+            </div>
+
+            <div class="step">
+
+                <div class="number">4</div>
+
+                <h3>Receive Crypto</h3>
+
+                <p>
+                    Your transaction is completed quickly and securely.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+          STATS
+    ========================== -->
+
+    <section class="stats">
+
+        <div class="stat-box">
+
+            <h2 class="counter" data-target="10000">0</h2>
+
+            <p>Successful Trades</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2 class="counter" data-target="500">0</h2>
+
+            <p>Happy Clients</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2 class="counter" data-target="20">0</h2>
+
+            <p>Supported Coins</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2>24/7</h2>
+
+            <p>Customer Support</p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+          CALL TO ACTION
+    ========================== -->
+
+    <section class="cta">
+
+        <h2>
+
+            Ready To Trade Cryptocurrency?
+
+        </h2>
+
+        <p>
+
+            Buy and sell cryptocurrency securely with fast transactions and competitive rates.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#" class="primary-btn">
+
+                Start Trading
+
+            </a>
+
+            <a href="#" class="secondary-btn">
+
+                Contact Us
+
+            </a>
+
+        </div>
+
+    </section>
+        <!-- =========================
+         TESTIMONIALS
+    ========================== -->
+
+    <section class="testimonials" id="testimonials">
+
+        <div class="section-title">
+
+            <span>Testimonials</span>
+
+            <h2>What Our Clients Say</h2>
+
+            <p>Trusted by traders around the world.</p>
+
+        </div>
+
+        <div class="testimonial-grid">
+
+            <div class="testimonial-card">
+
+                <i class="fa-solid fa-quote-left"></i>
+
+                <p>
+                    Fast, secure and professional service. I received my crypto within minutes.
+                </p>
+
+                <h4>Michael A.</h4>
+
+                <span>Verified Client</span>
+
+            </div>
+
+            <div class="testimonial-card">
+
+                <i class="fa-solid fa-quote-left"></i>
+
+                <p>
+                    The exchange rates were excellent and the support team responded immediately.
+                </p>
+
+                <h4>Sarah K.</h4>
+
+                <span>Verified Client</span>
+
+            </div>
+
+            <div class="testimonial-card">
+
+                <i class="fa-solid fa-quote-left"></i>
+
+                <p>
+                    I've completed multiple trades and every transaction has been smooth and reliable.
+                </p>
+
+                <h4>David O.</h4>
+
+                <span>Verified Client</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         FAQ
+    ========================== -->
+
+    <section class="faq" id="faq">
+
+        <div class="section-title">
+
+            <span>Questions</span>
+
+            <h2>Frequently Asked Questions</h2>
+
+        </div>
+
+        <div class="faq-container">
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Which cryptocurrencies do you trade?
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <div class="faq-answer">
+                    <p>We support Bitcoin, Ethereum, USDT, Solana, BNB, XRP, Litecoin and many more.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    How long do transactions take?
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <div class="faq-answer">
+                    <p>Most transactions are completed within a few minutes after confirmation.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is trading secure?
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <div class="faq-answer">
+                    <p>Yes. We use secure procedures and verify every transaction before completion.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="contact" id="contact">
+
+        <div class="section-title">
+
+            <span>Get In Touch</span>
+
+            <h2>Contact Us</h2>
+
+            <p>We're here to help with your crypto transactions.</p>
+
+        </div>
+
+        <div class="contact-wrapper">
+
+            <div class="contact-info">
+
+                <h3>Let's Talk</h3>
+
+                <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: +234 XXX XXX XXXX</p>
+
+                <p><i class="fa-solid fa-envelope"></i> Email: info@nexacrypt.com</p>
+
+                <p><i class="fa-solid fa-location-dot"></i> Worldwide Online Service</p>
+
+            </div>
+
+            <form class="contact-form">
+
+                <input type="text" placeholder="Your Name" required>
+
+                <input type="email" placeholder="Your Email" required>
+
+                <textarea rows="6" placeholder="Your Message"></textarea>
+
+                <button type="submit" class="primary-btn">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+
+    <a href="#" class="whatsapp-float">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Back To Top -->
+
+    <button id="backToTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-logo">
+
+                <i class="fa-brands fa-bitcoin"></i>
+
+                <h2>NexaCrypt</h2>
+
+                <p>
+                    Secure cryptocurrency trading with speed, trust and transparency.
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="#home">Home</a></li>
+
+                    <li><a href="#services">Services</a></li>
+
+                    <li><a href="#coins">Coins</a></li>
+
+                    <li><a href="#faq">FAQ</a></li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h3>Services</h3>
+
+                <ul>
+
+                    <li>Buy Crypto</li>
+
+                    <li>Sell Crypto</li>
+
+                    <li>Wallet Support</li>
+
+                    <li>Fast Transfers</li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h3>Follow Us</h3>
+
+                <div class="social-icons">
+
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+
+            <p>
+
+                © 2026 NexaCrypt Exchange. All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
 
