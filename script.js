@@ -273,3 +273,102 @@ revealElements.forEach(element => {
     
 
 });
+/*=====================================
+        LIVE CRYPTO PRICES
+=====================================*/
+
+const priceElements = {
+
+    bitcoin: document.getElementById("btc-price"),
+
+    ethereum: document.getElementById("eth-price"),
+
+    tether: document.getElementById("usdt-price"),
+
+    solana: document.getElementById("sol-price"),
+
+    binancecoin: document.getElementById("bnb-price"),
+
+    ripple: document.getElementById("xrp-price")
+
+};
+
+async function loadCryptoPrices(){
+
+    try{
+
+        const response = await fetch(
+
+            "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,tether,solana,binancecoin,ripple&vs_currencies=usd"
+
+        );
+
+        const data = await response.json();
+
+        updatePrice(priceElements.bitcoin,data.bitcoin.usd);
+
+        updatePrice(priceElements.ethereum,data.ethereum.usd);
+
+        updatePrice(priceElements.tether,data.tether.usd);
+
+        updatePrice(priceElements.solana,data.solana.usd);
+
+        updatePrice(priceElements.binancecoin,data.binancecoin.usd);
+
+        updatePrice(priceElements.ripple,data.ripple.usd);
+
+    }
+
+    catch(error){
+
+        console.log("Unable to load prices.",error);
+
+    }
+
+}
+
+function updatePrice(element,price){
+
+    if(!element) return;
+
+    element.textContent="$"+Number(price).toLocaleString("en-US");
+
+}
+
+loadCryptoPrices();
+
+setInterval(loadCryptoPrices,60000);
+const previousPrices = {};
+
+function updatePrice(element, price) {
+
+    if (!element) return;
+
+    const key = element.id;
+
+    const oldPrice = previousPrices[key];
+
+    element.textContent = "$" + Number(price).toLocaleString("en-US");
+
+    if (oldPrice !== undefined) {
+
+        if (price > oldPrice) {
+
+            element.style.color = "#16C784";
+
+        } else if (price < oldPrice) {
+
+            element.style.color = "#EA3943";
+
+        }
+
+        setTimeout(() => {
+
+            element.style.color = "";
+
+        }, 1500);
+
+    }
+
+    previousPrices[key] = price;
+}
