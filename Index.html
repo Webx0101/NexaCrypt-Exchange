@@ -755,19 +755,43 @@
 
             </div>
 
-            <form class="contact-form">
+           <form
+    name="contact"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field">
 
-                <input type="text" placeholder="Your Name" required>
+    <input type="hidden" name="form-name" value="contact">
 
-                <input type="email" placeholder="Your Email" required>
+    <p hidden>
+        <label>
+            Don't fill this out:
+            <input name="bot-field">
+        </label>
+    </p>
 
-                <textarea rows="6" placeholder="Your Message"></textarea>
+    <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required>
 
-                <button type="submit" class="primary-btn">
-                    Send Message
-                </button>
+    <input
+        type="email"
+        name="email"
+        placeholder="Email Address"
+        required>
 
-            </form>
+    <textarea
+        name="message"
+        placeholder="Write your message"
+        required></textarea>
+
+    <button class="primary-btn">
+        Send Message
+    </button>
+
+</form>
 
         </div>
 
