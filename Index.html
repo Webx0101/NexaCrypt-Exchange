@@ -743,55 +743,81 @@
 
         <div class="contact-wrapper">
 
-            <div class="contact-info">
+    <div class="contact-info">
 
-                <h3>Let's Talk</h3>
+        <h3>Let's Talk</h3>
 
-                <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: +234 XXX XXX XXXX</p>
+        <p>
+            Have questions about buying or selling cryptocurrency?
+            Contact us using any of the options below.
+        </p>
 
-                <p><i class="fa-solid fa-envelope"></i> Email: info@nexacrypt.com</p>
+        <div class="contact-item">
 
-                <p><i class="fa-solid fa-location-dot"></i> Worldwide Online Service</p>
+            <i class="fab fa-whatsapp"></i>
 
-            </div>
+            <a href="https://wa.me/2348012345678" target="_blank">
+                +234 801 234 5678
+            </a>
 
-           <form
-    name="contact"
-    method="POST"
-    data-netlify="true"
-    netlify-honeypot="bot-field">
+        </div>
 
-    <input type="hidden" name="form-name" value="contact">
+        <div class="contact-item">
 
-    <p hidden>
-        <label>
-            Don't fill this out:
-            <input name="bot-field">
-        </label>
-    </p>
+            <i class="fas fa-envelope"></i>
 
-    <input
-        type="text"
-        name="name"
-        placeholder="Your Name"
-        required>
+            <a href="mailto:info@nexacrypt.com">
+                info@nexacrypt.com
+            </a>
 
-    <input
-        type="email"
-        name="email"
-        placeholder="Email Address"
-        required>
+        </div>
 
-    <textarea
-        name="message"
-        placeholder="Write your message"
-        required></textarea>
+    </div>
 
-    <button class="primary-btn">
-        Send Message
-    </button>
+    <form
+        class="contact-form"
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field">
 
-</form>
+        <input type="hidden" name="form-name" value="contact">
+
+        <p hidden>
+            <label>
+                Don't fill this out:
+                <input name="bot-field">
+            </label>
+        </p>
+
+        <input
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            required>
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            required>
+
+        <textarea
+            name="message"
+            placeholder="Write your message..."
+            required></textarea>
+
+        <button class="primary-btn">
+            Send Message
+        </button>
+
+        <p class="contact-note">
+            We usually respond within 24 hours.
+        </p>
+
+    </form>
+
+</div>
 
         </div>
 
